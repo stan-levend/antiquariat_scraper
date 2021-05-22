@@ -1,6 +1,8 @@
 import requests
 import re
+import csv
 from bs4 import BeautifulSoup
+
 
 def antikvart(query):
   url = f"https://www.antikvart.sk/site/Vyhladavanie.html?sv={query.strip().lower().replace(' ','+')}"
@@ -64,13 +66,21 @@ def search_antiqart_page(soup):
     search = book.div.p.get_text()
     if 'Stav skladu:' in search:
       print(book.h3.a.get_text())
-      print(search, '\n')
+      print(search.strip(), '\n')
 
-queries = [
-  # 'chesterton', 'nesbo', 'chiang', 'tolkien', 'rovelli', 'lewis', 'dostojevski', 'orwell', 'eldredge', 'tegmark', 'peterson', 'doyle', 'asimov', 'feynman'
-  # 'verne'
-]
+if __name__ == "__main__":
+  queries = [
+  # 'chesterton', 'nesbo', 'chiang', 'tolkien', 'rovelli', 'tolstoj',
+  # 'lewis', 'dostojevski', 'orwell', 'eldredge', 'tegmark', 'peterson', 'doyle', 'asimov', 'feynman', 'eriksen', ''
+  # 'rovelli', 'smolin', 'hawking', 'tyson', 'eriksen', 'wheeler archibald'
+  ]
 
-for query in queries:
-  antikvart(query)
-  antiqart(query)
+  with open('queries.txt', 'r') as fd:
+      reader = csv.reader(fd)
+      for row in reader:
+        queries.extend(row)
+  
+  for query in queries:
+    antikvart(query)
+    antiqart(query)
+    # pass
