@@ -78,7 +78,10 @@ if __name__ == "__main__":
   with open('queries.txt', 'r') as fd:
       reader = csv.reader(fd)
       for row in reader:
-        queries.extend(row)
+        if row[0][0] == '#':
+          continue
+        print(row)
+        # queries.extend(row)
   
   for query in queries:
     antikvart(query)
