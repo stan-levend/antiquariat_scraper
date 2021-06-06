@@ -80,8 +80,8 @@ if __name__ == "__main__":
       for row in reader:
         if row[0][0] == '#':
           continue
-        print(row)
-        # queries.extend(row)
+        # print(row)
+        queries.extend(row)
   
   for query in queries:
     antikvart(query)
