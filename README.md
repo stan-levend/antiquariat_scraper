@@ -33,6 +33,7 @@ Use `#` at the start of the line to exclude the line from the list of queries.
     - [ ] https://www.antikvariatik.sk/?
 
 - [ ] Divide shops into separate `.py` files
+- [ ] Add delivery options and prices.
 - [x] Add txt file for queries input.
 - [ ] Take input directly from command line.
 - [ ] Make GUI.
