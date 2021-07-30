@@ -202,8 +202,8 @@ if __name__ == '__main__':
   # 'rovelli', 'smolin', 'hawking', 'tyson', 'eriksen', 'wheeler archibald'
   ]
 
-  input = input()
-  queries.append(str(input))
+  # input = input()
+  # queries.append(str(input))
 
   with open('queries.txt', 'r') as fd:
       reader = csv.reader(fd)
