@@ -1,4 +1,5 @@
-#chesterton, nesbo
-chesterton, nesbo, chiang, tolkien, rovelli
-tolstoj, dostojevski, orwell, eldredge
+#jules
+#tolkien
+#chesterton, nesbo, chiang, tolkien, rovelli
+#tolstoj, dostojevski, orwell, eldredge
 #tegmark, peterson, doyle, asimov, feynman, eriksen
